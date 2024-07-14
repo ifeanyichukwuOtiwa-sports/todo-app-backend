@@ -1,0 +1,10 @@
+services:
+  user-mysql:
+    image: mysql:8.4.0
+    container_name: users-mysql
+    hostname: users-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: users_mysql
+    ports:
+      - '6033:3306'
