@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - include:
+      file: changelogs/init-user-schema.yml
+      relativeToChangelogFile: true

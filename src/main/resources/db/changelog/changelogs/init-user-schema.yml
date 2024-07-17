@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      author: Ifeanyichukwu Otiwa
+      id: init-user-schema-changeset
+      comment: create users schema changeset
+
+      changes:
+        - sql:
+            sql:
+              CREATE TABLE IF NOT EXISTS user(
+                id BINARY(16) PRIMARY KEY, 
+                first_name VARCHAR(100) NOT NULL,
+                last_name VARCHAR(100), 
+                email VARCHAR(150) UNIQUE NOT NULL,
+                username VARCHAR(100) UNIQUE NOT NULL,
+                password VARCHAR(300) NOT NULL,
+                created_at DATETIME NOT NULL
+              );
+
