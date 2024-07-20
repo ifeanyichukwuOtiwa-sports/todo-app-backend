@@ -1,6 +1,7 @@
 [versions]
 lombok = "1.18.32"
 logback-classic = "1.5.6"
+spring-boot = "3.3.2"
 
 [libraries]
 lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
@@ -10,6 +11,7 @@ logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "lo
 slf4j = { module = "org.slf4j:slf4j-api" }
 liquibase = { module = "org.liquibase:liquibase-core" }
 mysql = { module = "com.mysql:mysql-connector-j" }
+jakarta-persistence-api = { module = "jakarta.persistence:jakarta.persistence-api" }
 
 
 spring-boot-devtools = { module = "org.springframework.boot:spring-boot-devtools" }
@@ -19,9 +21,15 @@ spring-boot-testcontainers = { module = "org.springframework.boot:spring-boot-te
 spring-boot-starter-security = { module = "org.springframework.boot:spring-boot-starter-security" }
 spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
 spring-boot-starter-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
+spring-boot-data-jpa = { module = "org.springframework.data:spring-data-jpa" }
 spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter" }
+spring-boot-dependencies = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "spring-boot" }
 spring-boot-test-autoconfigure = { module = "org.springframework.boot:spring-boot-test-autoconfigure" }
 spring-security-test = { module = "org.springframework.security:spring-security-test" }
+
+spring-context = { module = "org.springframework:spring-context" }
+spring-web = { module = "org.springframework:spring-web" }
 
 
 testcontainers-junit-jupiter = { module = "org.testcontainers:junit-jupiter" }

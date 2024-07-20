@@ -1,0 +1,17 @@
+dependencies {
+    implementation(project(":app:persistence-api"))
+
+
+    implementation libs.spring.boot.starter.data.jpa
+    implementation libs.spring.boot.data.jpa
+    implementation libs.spring.boot.autoconfigure
+
+    testImplementation(libs.testcontainers.junit.jupiter)
+    testImplementation(libs.testcontainers.mysql)
+    testImplementation(libs.spring.boot.testcontainers)
+    testImplementation(libs.spring.boot.test.autoconfigure)
+}
+
+test {
+    jvmArgs("-XX:+EnableDynamicAgentLoading")
+}

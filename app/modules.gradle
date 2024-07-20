@@ -7,4 +7,6 @@ include(
         ':app:persistence',
         ':app:persistence-api',
         ':app:service',
+
+        ':app:app-test'
 )

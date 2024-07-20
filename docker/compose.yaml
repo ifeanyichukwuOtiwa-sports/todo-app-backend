@@ -8,3 +8,9 @@ services:
       MYSQL_DATABASE: users_mysql
     ports:
       - '6033:3306'
+  redis-todo-app:
+    image: redis:7.2.5
+    container_name: redis-todo-app
+    hostname: redis-todo-app
+    ports:
+      - '6379:6379'

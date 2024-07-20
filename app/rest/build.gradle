@@ -1,0 +1,8 @@
+dependencies {
+    implementation(project(":app:service-api"))
+    implementation(project(":app:exception"))
+
+    implementation(libs.spring.context)
+    implementation(libs.spring.web)
+    implementation(libs.spring.boot.autoconfigure)
+}

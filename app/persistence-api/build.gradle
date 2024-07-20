@@ -1,0 +1,8 @@
+apply {
+    plugin('java-library')
+}
+
+
+dependencies {
+    implementation libs.jakarta.persistence.api
+}

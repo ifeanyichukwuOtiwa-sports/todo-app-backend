@@ -1,0 +1,16 @@
+
+
+dependencies {
+    testImplementation(project(":app:core"))
+    testImplementation(project(":app:rest"))
+    testImplementation(project(":app:service"))
+    testImplementation(project(":app:service-api"))
+    testImplementation(project(":app:security"))
+    testImplementation(project(":app:persistence"))
+    testImplementation(project(":app:persistence-api"))
+    testImplementation(libs.testcontainers.junit.jupiter)
+    testImplementation(libs.testcontainers.mysql)
+    testImplementation(libs.spring.boot.testcontainers)
+    testImplementation(libs.spring.boot.test.autoconfigure)
+    testAnnotationProcessor(libs.lombok)
+}

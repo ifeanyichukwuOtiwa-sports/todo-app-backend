@@ -1,0 +1,11 @@
+dependencies {
+    implementation(project(":app:service-api"))
+    implementation(project(":app:persistence-api"))
+    implementation(project(":app:security"))
+    implementation(project(":app:exception"))
+//    implementation(project(":app:persistence"))
+
+
+    implementation(libs.spring.context)
+    implementation(libs.spring.boot.autoconfigure)
+}
