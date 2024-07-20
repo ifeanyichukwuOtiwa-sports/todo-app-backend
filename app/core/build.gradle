@@ -9,6 +9,7 @@ dependencies {
     implementation(project(":app:persistence"))
     implementation(project(":app:security"))
     implementation(project(":app:exception"))
+    implementation(project(":app:redis"))
 
 
     implementation libs.spring.boot.starter.data.jpa

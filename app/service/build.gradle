@@ -3,6 +3,7 @@ dependencies {
     implementation(project(":app:persistence-api"))
     implementation(project(":app:security"))
     implementation(project(":app:exception"))
+    implementation(project(":app:redis"))
     implementation(project(":proto-generated:user-secure-proto"))
 //    implementation(project(":app:persistence"))
     implementation(libs.spring.boot.starter.data.redis)

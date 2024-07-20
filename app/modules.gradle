@@ -1,6 +1,7 @@
 include(
         ':app:core',
         ':app:rest',
+        ':app:redis',
         ':app:exception',
         ':app:security',
         ':app:service-api',
