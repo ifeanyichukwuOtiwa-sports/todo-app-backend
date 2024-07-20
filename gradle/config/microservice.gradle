@@ -1,0 +1,9 @@
+apply {
+    plugin('java-library')
+    plugin('application')
+    plugin('org.springframework.boot')
+}
+
+allprojects {
+    apply plugin: 'java-library'
+}

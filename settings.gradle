@@ -1,1 +1,5 @@
 rootProject.name = 'todo-app'
+
+apply {
+    from('file:app/modules.gradle')
+}

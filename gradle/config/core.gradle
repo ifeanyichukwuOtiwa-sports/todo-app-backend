@@ -1,0 +1,56 @@
+allprojects {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        google()
+    }
+}
+
+subprojects {
+    apply {
+        plugin 'java'
+        plugin 'idea'
+    }
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(21)
+        }
+    }
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        google()
+    }
+
+    dependencies {
+        implementation(platform("org.junit:junit-bom:${junit_bom_version}"))
+        implementation(libs.logback.classic)
+        implementation(libs.slf4j)
+
+        annotationProcessor(libs.lombok)
+        compileOnly(libs.lombok)
+
+
+        testAnnotationProcessor(libs.lombok)
+        testCompileOnly(libs.lombok)
+        testRuntimeOnly(libs.junit.platform.launcher)
+    }
+
+    test {
+        jvmArgs("-XX:+EnableDynamicAgentLoading")
+        useJUnitPlatform()
+        testLogging {
+            events "passed", "skipped", "failed"
+            exceptionFormat "full"
+        }
+    }
+
+}

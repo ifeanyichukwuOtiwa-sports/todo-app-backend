@@ -1,0 +1,10 @@
+include(
+        ':app:core',
+        ':app:rest',
+        ':app:exception',
+        ':app:security',
+        ':app:service-api',
+        ':app:persistence',
+        ':app:persistence-api',
+        ':app:service',
+)
