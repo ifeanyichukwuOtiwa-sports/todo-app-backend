@@ -3,9 +3,15 @@ dependencies {
     implementation(project(":app:persistence-api"))
     implementation(project(":app:security"))
     implementation(project(":app:exception"))
+    implementation(project(":proto-generated:user-secure-proto"))
 //    implementation(project(":app:persistence"))
+    implementation(libs.spring.boot.starter.data.redis)
+    implementation(libs.redis.clients)
 
 
     implementation(libs.spring.context)
     implementation(libs.spring.boot.autoconfigure)
+    implementation(libs.grpc.protobuf)
+    implementation(libs.protobuf.java.util)
+    implementation(libs.protobuf.java)
 }

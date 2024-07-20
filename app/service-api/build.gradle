@@ -1,0 +1,5 @@
+dependencies {
+    implementation(project(":app:persistence-api"))
+
+    implementation(libs.jakarta.validation.api)
+}

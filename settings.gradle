@@ -2,4 +2,6 @@ rootProject.name = 'todo-app'
 
 apply {
     from('file:app/modules.gradle')
+    from('file:proto-generated/modules.gradle')
+    from('file:api/modules.gradle')
 }

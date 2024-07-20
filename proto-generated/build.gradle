@@ -1,0 +1,5 @@
+subprojects {
+    apply {
+        from("file:${project.rootDir}/gradle/config/protobuf.gradle")
+    }
+}

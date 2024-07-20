@@ -1,6 +1,9 @@
 package iwo.wintech.todoapp.rest.controller;
 
 import iwo.wintech.todoapp.api.dto.CreateUserRequest;
+import iwo.wintech.todoapp.api.dto.LoginRequest;
+import iwo.wintech.todoapp.api.dto.LoginResponse;
+import iwo.wintech.todoapp.api.service.AuthenticationService;
 import iwo.wintech.todoapp.api.service.UserService;
 
 import lombok.RequiredArgsConstructor;
@@ -16,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/auth")
 class AuthenticationController {
     private final UserService userService;
+    private final AuthenticationService authenticationService;
 
 
     @PostMapping("/register")
@@ -24,4 +28,8 @@ class AuthenticationController {
     }
 
 
+    @PostMapping("/login")
+    public LoginResponse loginUser(@RequestBody final LoginRequest request) {
+        return authenticationService.login(request.username(), request.password());
+    }
 }

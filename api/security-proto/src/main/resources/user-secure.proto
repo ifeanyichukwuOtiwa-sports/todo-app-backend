@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package iwo.wintech.todoapp.api.user;
+
+
+
+message ProtoUser {
+  string id = 1;
+  string username = 2;
+  string email = 3;
+  string password = 4;
+  repeated string roles = 5;
+  string firstname = 6;
+  string lastname = 7;
+}

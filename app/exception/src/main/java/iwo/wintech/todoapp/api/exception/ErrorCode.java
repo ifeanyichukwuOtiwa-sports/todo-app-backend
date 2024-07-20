@@ -5,7 +5,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum ErrorCode {
     USER_NOT_FOUND("User not found"),
-    USER_ALREADY_EXIST("User already exists");
+    USER_ALREADY_EXIST("User already exists"),
+    WRONG_PASSWORD("Invalid password");
 
     private final String message;
 

@@ -11,6 +11,7 @@ buildscript {
         classpath("com.bmuschko:gradle-docker-plugin:${gradleDockerPluginVersion}")
         classpath("com.google.protobuf:protobuf-gradle-plugin:${protobufGradlePlugin}")
         classpath("io.spring.dependency-management:io.spring.dependency-management.gradle.plugin:${dependencyManagement}")
+        classpath("com.google.protobuf:protobuf-gradle-plugin:${protobufGradlePluginVersion}")
 
     }
 }

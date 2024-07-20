@@ -9,3 +9,4 @@ spring:
   liquibase:
     change-log: classpath:/db/changelog/changelog-master.yml
 
+

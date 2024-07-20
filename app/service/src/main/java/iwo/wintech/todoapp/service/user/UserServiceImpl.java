@@ -44,10 +44,14 @@ class UserServiceImpl implements UserService {
 
     @Override
     public UserResponse findUserByEmailOrUsername(final String emailOrUsername) {
-        return userRepository.findUserByEmail(emailOrUsername)
-                .or(() -> userRepository.findUserByUsername(emailOrUsername))
+        return findUserByCreds(emailOrUsername)
                 .map(this::mapToUserResponse )
                 .orElseThrow(ErrorCode.USER_NOT_FOUND::exception);
+    }
+
+    private Optional<User> findUserByCreds(final String emailOrUsername) {
+        return userRepository.findUserByEmail(emailOrUsername)
+                .or(() -> userRepository.findUserByUsername(emailOrUsername));
     }
 
     @Override
@@ -64,6 +68,11 @@ class UserServiceImpl implements UserService {
                 .map(this::mapToUserResponse
                 )
                 .toList();
+    }
+
+    @Override
+    public User findUser(final String username) {
+        return findUserByCreds(username).orElseThrow(ErrorCode.USER_NOT_FOUND::exception);
     }
 
     private UserResponse mapToUserResponse(final User u) {

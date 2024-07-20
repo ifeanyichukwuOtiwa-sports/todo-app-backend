@@ -9,4 +9,5 @@ import org.springframework.context.annotation.Import;
 @ComponentScan(basePackages = "iwo.wintech.todoapp.service")
 @Import(TodoSecurityConfig.class)
 public class TodoServiceConfig {
+
 }
