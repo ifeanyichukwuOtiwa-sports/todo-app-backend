@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      author: Ifeanyichukwu Otiwa
+      id: init-user_ROLES-schema-changeset
+      comment: create users_roles schema changeset
+
+      changes:
+        - sql:
+            sql:
+              CREATE TABLE IF NOT EXISTS role(
+                role_id BINARY(16) PRIMARY KEY, 
+                role_name VARCHAR(255) NOT NULL UNIQUE
+              );
+

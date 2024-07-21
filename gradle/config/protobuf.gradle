@@ -6,19 +6,21 @@ apply {
 
 protobuf {
     protoc {
-        if (osdetector.os == "osx") {
-            artifact = "com.google.protobuf:protoc:${google_protobuf_version}:osx-x86_64"
-        } else {
-            artifact = "com.google.protobuf:protoc:${google_protobuf_version}"
-        }
+//        if (osdetector.os == "osx") {
+//            artifact = "com.google.protobuf:protoc:${google_protobuf_version}:osx-x86_64"
+//        } else {
+//            artifact = "com.google.protobuf:protoc:${google_protobuf_version}"
+//        }
+        artifact = "com.google.protobuf:protoc:${google_protobuf_version}"
     }
     plugins {
         grpc {
-            if (osdetector.os == "osx") {
-                artifact = "io.grpc:protoc-gen-grpc-java:${grpc_version}:osx-x86_64"
-            } else {
-                artifact = "io.grpc:protoc-gen-grpc-java:${grpc_version}"
-            }
+//            if (osdetector.os == "osx") {
+//                artifact = "io.grpc:protoc-gen-grpc-java:${grpc_version}:osx-x86_64"
+//            } else {
+//                artifact = "io.grpc:protoc-gen-grpc-java:${grpc_version}"
+//            }
+            artifact = "io.grpc:protoc-gen-grpc-java:${grpc_version}"
         }
     }
     generateProtoTasks {
@@ -56,6 +58,7 @@ dependencies {
     implementation(libs.grpc.stub)
     implementation(libs.grpc.protobuf)
 
-    implementation 'jakarta.annotation:jakarta.annotation-api:3.0.0'
+    runtimeOnly libs.grpc.netty.shaded
+    compileOnly libs.tomcat.annotations.api
 
 }

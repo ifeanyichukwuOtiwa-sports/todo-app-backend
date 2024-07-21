@@ -2,9 +2,11 @@
 lombok = "1.18.32"
 logback-classic = "1.5.6"
 spring-boot = "3.3.2"
-protobuf-java = "3.15.0"
-grpc-stub = "1.34.1"
+protobuf-java = "4.27.2"
+grpc-stub = "1.65.1"
 redis-clients = "5.1.3"
+annotations-api = "6.0.53"
+jakarta-servlet= "6.1.0"
 
 [libraries]
 lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
@@ -32,9 +34,11 @@ spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter" 
 spring-boot-dependencies = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "spring-boot" }
 spring-boot-test-autoconfigure = { module = "org.springframework.boot:spring-boot-test-autoconfigure" }
 spring-security-test = { module = "org.springframework.security:spring-security-test" }
+spring-security-web = { module = "org.springframework.security:spring-security-web" }
 
 spring-context = { module = "org.springframework:spring-context" }
 spring-web = { module = "org.springframework:spring-web" }
+spring-webmvc = { module = "org.springframework:spring-webmvc" }
 
 jakarta-validation-api = { module = "jakarta.validation:jakarta.validation-api" }
 
@@ -45,4 +49,8 @@ protobuf-java = { module = "com.google.protobuf:protobuf-java", version.ref = "p
 protobuf-java-util = { module = "com.google.protobuf:protobuf-java-util", version.ref = "protobuf-java" }
 grpc-stub = { module = "io.grpc:grpc-stub", version.ref = "grpc-stub" }
 grpc-protobuf = { module = "io.grpc:grpc-protobuf", version.ref = "grpc-stub" }
+grpc-netty-shaded = { module = "io.grpc:grpc-netty-shaded", version.ref = "grpc-stub" }
 redis-clients = { module = "redis.clients:jedis", version.ref = "redis-clients" }
+
+tomcat-annotations-api = { module = "org.apache.tomcat:annotations-api", version.ref = "annotations-api" }
+jakarta-servlet-api = { module = "jakarta.servlet:jakarta.servlet-api", version.ref = "jakarta-servlet"}

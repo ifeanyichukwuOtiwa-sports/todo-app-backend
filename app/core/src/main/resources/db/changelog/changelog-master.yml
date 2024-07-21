@@ -2,3 +2,9 @@ databaseChangeLog:
   - include:
       file: changelogs/init-user-schema.yml
       relativeToChangelogFile: true
+  - include:
+      file: changelogs/init-roles-schema.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changelogs/init-user_roles-schema.yml
+      relativeToChangelogFile: true
